@@ -122,23 +122,7 @@ def rconfunc(groupid, name) -> None:
 
 def activate() -> None:
 	gkey = icondrir.get()
-	# cryptolens rsa pub here
-	# cryptolens auth here
-
-	result = Key.activate(token=auth,\
-				rsa_pub_key=RSAPubKey,\
-				product_id=13242, \
-				key=gkey,\
-				machine_code=Helpers.GetMachineCode())
-
-	if result[0] == None or not Helpers.IsOnRightMachine(result[0]):
-	# an error occurred or the key is invalid or it cannot be activated
-	# (eg. the limit of activated devices was achieved)
-		window.title("NeoSpam | Activation Failed")
-		activate.status = False
-	else:
-		window.title("NeoSpam | Activated")
-		activate.status = True
+	activate.status = True
 
 window.title("NeoSpam")
 window.geometry("540x400")
