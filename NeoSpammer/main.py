@@ -127,7 +127,6 @@ def activate() -> None:
 window.title("NeoSpam")
 window.geometry("540x400")
 window.configure(background="black")
-window.iconbitmap("./data/assets/ico.ico")
 Label (window, text="Neo GC Spammer | Version 1.0 | kunt#1337", bg="black", fg="blue", font="ubuntu 12").grid(row=0, column=0, sticky=W)
 Label (window, text="Target User-ID Below:", bg="black", fg="blue", font="ubuntu 12").grid(row=2, column=0, sticky=W)
 userid = Entry(window, width=60, bg="blue")
